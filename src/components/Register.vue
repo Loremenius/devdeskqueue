@@ -1,5 +1,6 @@
 <template>
     <div class="register">
+        <h1>Register</h1>
         <form class="registerForm">
             <label>
                 Username:
@@ -13,6 +14,12 @@
                 Re-Enter Password:
                 <input type="password" v-model.trim="passAgain"/>
             </label>
+            <label>
+                Role:
+                <select v-model.trim="role">
+                    <option value="student"> Student </option>
+                </select>
+            </label>
             <button>Create Profile</button>
         </form>
     </div>
@@ -25,7 +32,8 @@ export default {
         return {
             username:'',
             password:'',
-            passAgain:''
+            passAgain:'',
+            role:'student'
         }
     }
 }
