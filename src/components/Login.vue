@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { login } from "./ApiFunctions"
+
 export default {
     name:'Login',
     data () {
@@ -28,6 +30,8 @@ export default {
         submit:function () {
             // send to back end
             //console.log(`username: ${this.username}, password: ${this.password}`)
+            const data = login( this.username, this.password )
+            this.$router.push({ name:'Dashboard', params: { user: data }})
         }
     }
 }
