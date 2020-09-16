@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <h1>Login</h1>
-        <form class='login' v-on:submit.prevent="submit">
+        <form class='loginForm' v-on:submit.prevent="submit">
             <label>
                 Username:
                 <input type="text" v-model.trim="username"/>
