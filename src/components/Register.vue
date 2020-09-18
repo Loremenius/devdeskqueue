@@ -18,6 +18,7 @@
                 Role:
                 <select v-model.trim="role">
                     <option value="student"> Student </option>
+                    <option value="admin">Admin</option>
                 </select>
             </label>
             <button>Create Profile</button>
